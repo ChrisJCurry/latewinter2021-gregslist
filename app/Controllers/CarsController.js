@@ -12,8 +12,6 @@ import { carsService } from "../Services/CarsService.js"
 
 export default class CarsController{
   constructor(){
-    console.log("cars controller working")
-    console.log(ProxyState.cars)
     _draw()
     ProxyState.on("cars", _draw)
   }

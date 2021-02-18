@@ -5,7 +5,6 @@ class CarsService{
 
  
   constructor(){
-    console.log("cars service");
   }
 
   createCar(rawCar) {
@@ -32,6 +31,7 @@ class CarsService{
     temp.splice(carIndex, 1)
     ProxyState.cars = temp
   }
+  
 }
 
 export const carsService = new CarsService()
