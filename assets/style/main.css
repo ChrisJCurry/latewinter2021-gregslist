@@ -13,6 +13,11 @@
   display: none!important;
 }
 
+.test-animation {
+  animation-duration: 500ms;
+  transform: scale(.01);
+}
+
 /* *{
   border: 1px solid red;
 } */

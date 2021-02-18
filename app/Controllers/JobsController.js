@@ -1,4 +1,4 @@
-import {ProxyState} from '../AppState.js'
+import { ProxyState } from '../AppState.js'
 import { jobsService } from '../Services/JobsService.js'
 
 function _draw() {
@@ -33,8 +33,12 @@ export default class JobsController {
         jobsService.createJob(newJob);
     }
 
+    deleteJob(id) {
+        jobsService.deleteJob(id)
+    }
+
     showInterest(id) {
         jobsService.showInterest(id);
     }
-    
+
 }

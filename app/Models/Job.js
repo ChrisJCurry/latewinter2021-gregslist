@@ -1,7 +1,7 @@
-import {generateId} from '../Utils/GenerateId.js'
+import { generateId } from '../Utils/GenerateId.js'
 
 export default class Job {
-    constructor({title = "Potato farmer", salary = 50000, remote = false, hours = 40, travel = true, weeksTrainedReqd = 2, interests = 0}) {
+    constructor({ title = "Potato farmer", salary = 50000, remote = false, hours = 40, travel = true, weeksTrainedReqd = 2, interests = 0 }) {
         this.title = title;
         this.salary = salary;
         this.remote = remote;
@@ -13,14 +13,14 @@ export default class Job {
     }
 
     get Template() {
-        return /*html*/`<div class="card houses-text-hide col-12 col-sm-6 col-md-3 my-2">
+        return /*html*/`<div class="card jobs-text-hide col-12 col-sm-6 col-md-3 my-2">
             <i class="fa fa-trash fa-2x text-danger d-flex align-self-end pointer py-1" onclick="app.jobsController.deleteJob('${this.id}')" aria-hidden="true"></i>
             <div class="card-body bg-danger">                
                 <h2 class="card-title">${this.title}</h2>
                 <h4>Hours: ${this.hours}</h4>
-                <h4>Salary: ${this.salary}</h4>
-                <h4>Remote?: ${this.remote}</h4>
-                <h4>Travel?: ${this.travel}</h4>
+                <h4>Salary: $${this.salary}</h4>
+                <h4>Remote?: ${this.remote ? "yes" : "no"}</h4>
+                <h4>Travel?: ${this.travel ? "yes" : "no"}</h4>
                 <h4>Weeks required for training: ${this.weeksTrainedReqd}</h4>
                 <div class="row text-right">
                     <div class="col d-flex align-self-end">
