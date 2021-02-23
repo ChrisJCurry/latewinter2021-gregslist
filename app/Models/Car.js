@@ -1,15 +1,14 @@
 import {generateId} from "../Utils/GenerateId.js"
 
 export default class Car{
-constructor({make, model, year, price, description, imgUrl, miles}){
+constructor({make, model, year, price, description, imgUrl, _id, id}){
   this.make = make
   this.model = model
   this.year = year
   this.price = price
   this.description = description
   this.imgUrl = imgUrl
-  this.miles = miles
-  this.id = generateId()
+  this.id = _id || id
 }
 
 get Template(){
@@ -19,7 +18,6 @@ get Template(){
   <div class="card-body">
       <h4 class="card-title">${this.year} ${this.make} - ${this.model}</h4>
       <p class="card-text">${this.description}</p>
-      <p>Miles : ${this.miles}</p>
       <p>Price: ${this.price}</p>
       <button class="btn btn-success" onclick="app.carsController.bid('${this.id}')">Bid</button>
   </div>

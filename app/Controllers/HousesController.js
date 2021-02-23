@@ -20,15 +20,13 @@ export default class HousesController {
         let form = event.target;
 
         let newHouse = {
-            forSaleDate: form.forSaleDate.value,
-            sqFt: form.sqFt.value,
             bedrooms: form.bedrooms.value,
             bathrooms: form.bathrooms.value,
+            levels: form.levels.value,
             price: parseInt(form.price.value),
             imgUrl: form.imgUrl.value,
-            color: form.color.value,
-            garages: form.garages.value,
-            bids: 0
+            description: form.description.value,
+            year: form.year.value,
         }
 
         housesService.createHouse(newHouse);

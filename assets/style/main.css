@@ -22,12 +22,6 @@
   border: 1px solid red;
 } */
 
-w-50-bg {
-  left: 50%;
-  top: 50%;
-  background-color: cyan;
-}
-
 :root {
   --blue: blue;
   --indigo: indigo;

@@ -76,20 +76,16 @@
                 <form class="form-inline houses-text-hide" onsubmit="app.housesController.createHouse(event)">
                     <div class="row d-flex mx-auto">
                         <div class="form-group px-1">
-                            <input type="text" name="forSaleDate" id="forSaleDate" class="form-control"
-                                placeholder="Date put for sale" aria-describedby="helpId">
-                        </div>
-                        <div class="form-group px-1">
-                            <input type="number" name="sqFt" id="sqFt" class="form-control" placeholder="SqFt"
-                                aria-describedby="helpId">
-                        </div>
-                        <div class="form-group px-1">
                             <input type="number" name="bedrooms" id="bedrooms" class="form-control"
                                 placeholder="Bedrooms" aria-describedby="helpId">
                         </div>
                         <div class="form-group px-1">
                             <input type="number" name="bathrooms" id="bathrooms" class="form-control"
                                 placeholder="Bathrooms" aria-describedby="helpId">
+                        </div>
+                        <div class="form-group px-1">
+                            <input type="number" name="levels" id="levels" class="form-control"
+                                placeholder="Levels" aria-describedby="helpId">
                         </div>
                         <div class="form-group px-1">
                             <input type="number" name="price" id="price" class="form-control" placeholder="Price"
@@ -100,11 +96,11 @@
                                 aria-describedby="helpId">
                         </div>
                         <div class="form-group px-1">
-                            <input type="text" name="color" id="color" class="form-control" placeholder="Color"
+                            <input type="text" name="description" id="description" class="form-control" placeholder="Description"
                                 aria-describedby="helpId">
                         </div>
                         <div class="form-group px-1">
-                            <input type="text" name="garages" id="garages" class="form-control" placeholder="Garages"
+                            <input type="text" name="year" id="year" class="form-control" placeholder="Year"
                                 aria-describedby="helpId">
                         </div>
                         <button class="btn btn-info" type="submit">Create</button>
@@ -126,26 +122,20 @@
                                 aria-describedby="helpId">
                         </div>
                         <div class="form-group px-1">
-                            <input type="number" name="salary" id="salary" class="form-control" placeholder="Salary"
+                            <input type="text" name="company" id="company" class="form-control" placeholder="Company"
                                 aria-describedby="helpId">
                         </div>
                         <div class="form-group px-1">
-                            <h4>Remote? </h4>
-                            <input type="checkbox" name="remote" id="remote" class="form-control checkbox-lg"
+                            <input type="number" name="rate" id="rate" class="form-control" placeholder="Rate"
                                 aria-describedby="helpId">
                         </div>
                         <div class="form-group px-1">
-                            <input type="number" name="hours" id="hours" class="form-control" placeholder="hours"
+                            <input type="number" name="hours" id="hours" class="form-control" placeholder="Hours"
                                 aria-describedby="helpId">
                         </div>
                         <div class="form-group px-1">
-                            <h4>Travel? </h4>
-                            <input type="checkbox" name="travel" id="travel" class="form-control"
-                                placeholder="Does this job require traveling?" aria-describedby="helpId">
-                        </div>
-                        <div class="form-group px-1">
-                            <input type="text text-lg" name="weeksTrainedReqd" id="weeksTrainedReqd"
-                                class="form-control" placeholder="Weeks spent training" aria-describedby="helpId">
+                            <input type="text" name="description" id="description" class="form-control" placeholder="Description"
+                                aria-describedby="helpId">
                         </div>
                         <button class="btn btn-info" type="submit">Create</button>
                     </div>
@@ -164,6 +154,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="app/main.js" type="module"></script>
 
 </html>

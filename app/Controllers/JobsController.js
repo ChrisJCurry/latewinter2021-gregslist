@@ -21,13 +21,11 @@ export default class JobsController {
         let form = event.target;
 
         let newJob = {
-            title: form.title.value,
-            salary: form.salary.value,
-            remote: form.remote.checked,
-            hours: form.hours.value,
-            travel: form.travel.checked,
-            weeksTrainedReqd: form.weeksTrainedReqd.value,
-            interests: 0
+            jobTitle: form.title.value,
+            company: form.company.value,
+            rate: form.rate.value,
+            hours: form.rate.value,
+            description: form.description.value
         }
 
         jobsService.createJob(newJob);
