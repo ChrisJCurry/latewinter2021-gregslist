@@ -11,10 +11,12 @@ class HousesService {
       try {
         const res = await api.get('houses')
         ProxyState.houses = res.data.map(rawHouseData => new House(rawHouseData))
+        console.log(ProxyState.houses)
       } catch (err) {
         console.log(err)
       }
     }
+    
 
     async createHouse(newHouse) {
         //  let newCar = new Car(rawCar)
@@ -51,8 +53,15 @@ class HousesService {
     bid(id){
       let temp = ProxyState.houses;
       let houseIndex = temp.findIndex(house => house.id == id)
-      temp[houseIndex].price += 1000
-      ProxyState.houses = temp
+      console.log(temp)
+      if(!temp[houseIndex]) {
+        this.getHouses()
+      }
+      if(temp[houseIndex] != null) {
+        temp[houseIndex].price += 1000
+        ProxyState.houses = temp
+      }
+      
     }
 
     toggleView(id) {

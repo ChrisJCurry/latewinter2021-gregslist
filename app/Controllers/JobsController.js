@@ -1,5 +1,6 @@
 import { ProxyState } from '../AppState.js'
 import { jobsService } from '../Services/JobsService.js'
+import { generateId } from '../Utils/GenerateId.js';
 
 function _draw() {
     let jobs = ProxyState.jobs;
@@ -19,15 +20,13 @@ export default class JobsController {
     createJob(event) {
         event.preventDefault();
         let form = event.target;
-
         let newJob = {
-            jobTitle: form.title.value,
+            jobTitle: form.jobTitle.value,
             company: form.company.value,
-            rate: form.rate.value,
-            hours: form.rate.value,
-            description: form.description.value
+            rate: form.rate.value || 30,
+            hours: form.hours.value || 40,
+            description: form.description.value || "This job has no description."
         }
-
         jobsService.createJob(newJob);
     }
 

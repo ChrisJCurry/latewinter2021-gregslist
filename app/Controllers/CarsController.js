@@ -26,8 +26,8 @@ export default class CarsController{
       model: form.model.value,
       year: form.year.value,
       price: parseFloat(form.price.value),
-      description: form.description.value,
-      imgUrl: form.imgUrl.value,
+      description: form.description.value || "This car has no description.",
+      imgUrl: form.imgUrl.value || "https://via.placeholder.com/150",
     }
     console.log(rawCar)
     carsService.createCar(rawCar)

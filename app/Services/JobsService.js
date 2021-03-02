@@ -26,6 +26,7 @@ class JobsService {
     // let temp = ProxyState.jobs
     // temp.push(new Job(newJob))
     // ProxyState.jobs = temp
+    console.log(newJob)
     try {
       const res = await api.post('jobs', newJob)
       ProxyState.jobs = [...ProxyState.jobs, new Job(res.data)]

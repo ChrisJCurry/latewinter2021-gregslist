@@ -33,32 +33,32 @@
                 <h1 onclick="app.housesController.toggleView(this)">Cars</h1>
                 <form class="form-inline cars-text-hide" onsubmit="app.carsController.createCar(event)">
 
-                    <div class="d-flex mx-auto">
-                        <div class="form-group px-1">
-                            <input type="text" name="make" id="make" class="form-control" placeholder="Make"
+                    <div class="d-flex flex-wrap">
+                        <div class="form-group pl-1">
+                            <input type="text" name="make" id="make" required=true class="form-control" placeholder="Make"
                                 aria-describedby="helpId">
                         </div>
-                        <div class="form-group px-1">
-                            <input type="text" name="model" id="model" class="form-control" placeholder="Model"
+                        <div class="form-group pl-1">
+                            <input type="text" name="model" id="model"  required=true class="form-control" placeholder="Model"
                                 aria-describedby="helpId">
                         </div>
-                        <div class="form-group px-1">
-                            <input type="number" name="year" id="year" class="form-control" placeholder="Year"
+                        <div class="form-group pl-1">
+                            <input type="number" name="year" id="year"  required=true class="form-control" placeholder="Year"
                                 aria-describedby="helpId">
                         </div>
-                        <div class="form-group px-1">
-                            <input type="number" name="price" id="price" class="form-control" placeholder="Price"
+                        <div class="form-group pl-1">
+                            <input type="number" name="price" id="price"  required=true class="form-control" placeholder="Price"
                                 aria-describedby="helpId">
                         </div>
-                        <div class="form-group px-1">
+                        <div class="form-group pl-1">
                             <input type="text" name="description" id="description" class="form-control"
                                 placeholder="Description" aria-describedby="helpId">
                         </div>
-                        <div class="form-group px-1">
-                            <input type="number" name="miles" id="miles" class="form-control" placeholder="Miles"
+                        <div class="form-group pl-1">
+                            <input type="number" name="miles" id="miles"  required=true class="form-control" placeholder="Miles"
                                 aria-describedby="helpId">
                         </div>
-                        <div class="form-group px-1">
+                        <div class="form-group pl-1">
                             <input type="text" name="imgUrl" id="imgUrl" class="form-control" placeholder="ImgUrl"
                                 aria-describedby="helpId">
                         </div>
@@ -76,19 +76,19 @@
                 <form class="form-inline houses-text-hide" onsubmit="app.housesController.createHouse(event)">
                     <div class="row d-flex mx-auto">
                         <div class="form-group px-1">
-                            <input type="number" name="bedrooms" id="bedrooms" class="form-control"
+                            <input type="number" name="bedrooms" id="bedrooms"  required=true class="form-control"
                                 placeholder="Bedrooms" aria-describedby="helpId">
                         </div>
                         <div class="form-group px-1">
-                            <input type="number" name="bathrooms" id="bathrooms" class="form-control"
+                            <input type="number" name="bathrooms" id="bathrooms"  required=true class="form-control"
                                 placeholder="Bathrooms" aria-describedby="helpId">
                         </div>
                         <div class="form-group px-1">
-                            <input type="number" name="levels" id="levels" class="form-control"
+                            <input type="number" name="levels" id="levels"  required=true class="form-control"
                                 placeholder="Levels" aria-describedby="helpId">
                         </div>
                         <div class="form-group px-1">
-                            <input type="number" name="price" id="price" class="form-control" placeholder="Price"
+                            <input type="number" name="price" id="price"  required=true class="form-control" placeholder="Price"
                                 aria-describedby="helpId">
                         </div>
                         <div class="form-group px-1">
@@ -96,11 +96,11 @@
                                 aria-describedby="helpId">
                         </div>
                         <div class="form-group px-1">
-                            <input type="text" name="description" id="description" class="form-control" placeholder="Description"
+                            <input type="text" name="description"  required=true id="description" class="form-control" placeholder="Description"
                                 aria-describedby="helpId">
                         </div>
                         <div class="form-group px-1">
-                            <input type="text" name="year" id="year" class="form-control" placeholder="Year"
+                            <input type="text" name="year" id="year"  required=true class="form-control" placeholder="Year"
                                 aria-describedby="helpId">
                         </div>
                         <button class="btn btn-info" type="submit">Create</button>
@@ -118,11 +118,11 @@
                 <form class="form-inline jobs-text-hide" onsubmit="app.jobsController.createJob(event)">
                     <div class="d-flex mx-auto">
                         <div class="form-group px-1">
-                            <input type="text" name="title" id="title" class="form-control" placeholder="Job Title"
+                            <input type="text" name="jobTitle" id="jobTitle" required=true class="form-control" placeholder="Job Title"
                                 aria-describedby="helpId">
                         </div>
                         <div class="form-group px-1">
-                            <input type="text" name="company" id="company" class="form-control" placeholder="Company"
+                            <input type="text" name="company" id="company" required=true class="form-control" placeholder="Company"
                                 aria-describedby="helpId">
                         </div>
                         <div class="form-group px-1">

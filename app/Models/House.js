@@ -13,7 +13,7 @@ export default class House {
     }
 
     get Template() {
-        return /*html*/`<div class="card houses-text-hide col-12 col-sm-6 col-md-3 mx-4 my-2">
+        return /*html*/`<div class="card houses-text-hide col-12 col-sm-6 col-md-3 pb-2 mx-4 my-2">
             <i class="fa fa-trash fa-2x text-danger d-flex align-self-end pointer py-1" onclick="app.housesController.deleteHouse('${this.id}')" aria-hidden="true"></i>
             <img class="card-img-top" src="${this.imgUrl}" alt="">
             <div class="card-body bg-danger">                
