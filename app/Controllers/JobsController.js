@@ -21,7 +21,7 @@ export default class JobsController {
         event.preventDefault();
         let form = event.target;
         let newJob = {
-            jobTitle: form.jobTitle.value,
+            title: form.title.value,
             company: form.company.value,
             rate: form.rate.value || 30,
             hours: form.hours.value || 40,
